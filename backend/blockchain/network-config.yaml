@@ -1,0 +1,42 @@
+name: tourist-verification-network
+version: 1.0.0
+
+channels:
+  touristchannel:
+    orderers:
+      - orderer.tourism.gov.in
+    peers:
+      - peer0.tourism.gov.in
+      - peer0.police.gov.in
+
+organizations:
+  TourismDept:
+    mspid: TourismDeptMSP
+    peers:
+      - peer0.tourism.gov.in
+    certificateAuthorities:
+      - ca.tourism.gov.in
+
+  PoliceDept:
+    mspid: PoliceDeptMSP
+    peers:
+      - peer0.police.gov.in
+    certificateAuthorities:
+      - ca.police.gov.in
+
+orderers:
+  orderer.tourism.gov.in:
+    url: grpcs://localhost:7050
+    tlsCACerts:
+      path: ./crypto-config/ordererOrganizations/tourism.gov.in/orderers/orderer.tourism.gov.in/tls/ca.crt
+
+peers:
+  peer0.tourism.gov.in:
+    url: grpcs://localhost:7051
+    tlsCACerts:
+      path: ./crypto-config/peerOrganizations/tourism.gov.in/peers/peer0.tourism.gov.in/tls/ca.crt
+
+  peer0.police.gov.in:
+    url: grpcs://localhost:8051
+    tlsCACerts:
+      path: ./crypto-config/peerOrganizations/police.gov.in/peers/peer0.police.gov.in/tls/ca.crt

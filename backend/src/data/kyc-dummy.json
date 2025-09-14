@@ -1,0 +1,28 @@
+[
+  {
+    "userId": "65555555555555555555555a",
+    "name": "John Doe",
+    "address": "123 Main Street, Mumbai, Maharashtra",
+    "phoneNumber": "9876543210",
+    "aadharNumber": "123456789012",
+    "tourDates": {
+      "startDate": "2025-10-01T00:00:00.000Z",
+      "endDate": "2025-10-15T00:00:00.000Z"
+    },
+    "verificationType": "aadhar",
+    "verificationNumber": "123456789012"
+  },
+  {
+    "userId": "65555555555555555555555b",
+    "name": "Jane Smith",
+    "address": "456 Park Avenue, Delhi, New Delhi",
+    "phoneNumber": "8765432109",
+    "passportNumber": "A1234567",
+    "tourDates": {
+      "startDate": "2025-11-01T00:00:00.000Z",
+      "endDate": "2025-11-20T00:00:00.000Z"
+    },
+    "verificationType": "passport",
+    "verificationNumber": "A1234567"
+  }
+]
